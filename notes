@@ -1,0 +1,17 @@
+https://www.youtube.com/watch?v=wxxP39cNJOs
+https://wiki.archlinux.org/title/installation_guide
+
+I use QEMU as the hypervisor of choice.
+
+VM Part
+Our task:
+	- Install a VM with the Linux OS of your choice.
+	- A disk size of 8 GB
+	- One 4.2 GB partition
+Network and Security
+	- Setup a firewall, DOS protection
+	- Add a user and give sudo premissions
+	- Stop services you don't need
+	- Two scripts
+Web Part
+	- Setup a web server
