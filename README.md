@@ -184,4 +184,6 @@ One of our requirements is to be able to SSH from our current machine to the vir
 
   3. Then change the port of SSH. Open /etc/ssh/sshd_config and uncomment and change the Port 22. For example `Port 61216`.
 
-See detailed list of usable ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers. (Pick from 49152 to 65535)
+See detailed list of usable ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers. (Pick from 49152 to 65535).
+
+Then on your host machine do: `ssh-copy-id -i .ssh/<public_key> -p <port> <user>@<ip>`
