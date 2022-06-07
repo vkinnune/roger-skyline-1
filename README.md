@@ -22,3 +22,4 @@ Setting up the VM make remember to make the disk image size 8GB.
 
 ![pic](pic-selected-220607-1343-40.png)
 
+Login with `root` as username and `artix` as password.
