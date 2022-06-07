@@ -174,7 +174,7 @@ When you first login add NetworkManager to the list of services:
 Now your network should work!
 #### SSH Setup
 
-One of our requirements is to be able from our current machine to the virtual machine using a different port and publickeys.
+One of our requirements is to be able to SSH from our current machine to the virtual machine using a different port and publickeys.
 
 Install Openssh with: `sudo pacman -Sy openssh-runit openssh`
 
