@@ -68,6 +68,4 @@ After creating the file systems we need to mount the partition so we can chroot 
 
 Run the following:
 
-`basestrap /mnt base`
-
-`basestrap /mnt runit linux`
+`basestrap /mnt base runit elogind-runit linux vim`
