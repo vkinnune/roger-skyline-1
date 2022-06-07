@@ -199,3 +199,4 @@ Install: `sudo pacman -S ufw ufw-runit`
 
 Enable it: `sudo ln -s /etc/runit/sv/ufw /run/runit/service/ufw`
 
+Allow firewall for SSH port: `sudo ufw allow 61216/tcp`
