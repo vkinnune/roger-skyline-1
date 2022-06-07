@@ -78,6 +78,8 @@ Now we have to chroot to get inside the system.
 
 Run `artix-chroot /mnt`
 
+After this step we are going to be inside our system.
+
 Here you can change to using bash by just typing `bash`.
 
 #### Systemclock
