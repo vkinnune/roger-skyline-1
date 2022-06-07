@@ -120,9 +120,9 @@ First we setup a hostname to identify the machine on a network.
 
 `nano /etc/hostname`
 
-And then edit your `/etc/hosts` file:
+And then edit your `/etc/hosts` file like this:
 ```
 127.0.0.1   localhost
 ::1         localhost
-127.0.1.1   desktop.localdomain desktop
+127.0.1.1   hostname.localdomain hostname
 ```
