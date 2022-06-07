@@ -14,6 +14,10 @@ How to install QEMU+Virt-Manager: https://youtu.be/wxxP39cNJOs
 
 ### Install
 
-Downloade the ISO from here: https://artixlinux.org/download.php
+Downloade the ISO file from here: https://artixlinux.org/download.php
 
 Just select the base verison of runit and then run the ISO on your VM.
+
+Setting up the VM make remember to make the disk image size 8GB.
+
+![pic]
