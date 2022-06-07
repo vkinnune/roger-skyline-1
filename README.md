@@ -145,7 +145,7 @@ First we need to install NetworkManager to handle our connection.
 
 `pacman -Sy networkmanager networkmanager-runit network-manager-applet`
 
-`sudo ln -s  /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager`
+Later we will link the NetworkManager service.
 
 Then we setup a hostname to identify the machine on a network.
 
@@ -165,3 +165,8 @@ exit <--exiting the chroot
 umount -R /mnt
 poweroff
 ```
+#### First Login
+
+When you first login add NetworkManager to the list of services:
+
+`sudo ln -s  /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager`
