@@ -44,7 +44,7 @@ If you use `lsblk` it shoud look something like that above.
 
 #### Creating file systems
 
-We will create a ext4 file system with the `mkfs.ext4` command in the terminal.
+We will create a ext4 file system with the `mkfs` program.
 
 Make sure to make the home partition the bigger one.
 
@@ -64,4 +64,10 @@ After creating the file systems we need to mount the partition so we can chroot 
 
 `mount /dev/disk/by-label/HOME /mnt/home`
 
+#### The Actual Install
 
+Run the following:
+
+`basestrap /mnt base`
+
+`basestrap /mnt runit linux`
