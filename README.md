@@ -190,3 +190,7 @@ You can get the VM's ip with the `ip address` command.
 
   4. On your host machine do: `ssh-copy-id -i .ssh/<publickey> -p <port> <user>@<ip>` to copy your publickey to the VM so you can SSH without a password. If you don't have a publickey on your host machine make it with `ssh-keygen`.
   5. Now you can SSH to the VM with `ssh <user>@<ip> -p <port>` without needing to type a password!
+
+#### Firewall Setup
+
+We are going to use the UFW (uncomplicated firewall).
