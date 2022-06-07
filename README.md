@@ -28,7 +28,7 @@ Use the `cfdisk` program to manage and display a disk partition table.
 
 Open `cfdisk /dev/vda`
 
-For me it's vda but for some it might be /dev/sda.
+For me it's vda but for some it might be /dev/sda or if you're not doing this to a VM it might be something beginning with nvme.
 
 Select gpt as label type.
 
