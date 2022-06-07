@@ -197,4 +197,5 @@ We are going to use the UFW (uncomplicated firewall).
 
 Install: `sudo pacman -S ufw ufw-runit`
 
+Enable it: `sudo ln -s /etc/runit/sv/ufw /run/runit/service/ufw`
 
