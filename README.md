@@ -20,6 +20,19 @@ Just select the base verison of runit and then run the ISO on your VM.
 
 Setting up the VM make remember to make the disk image size 8GB.
 
-![pic](pic-selected-220607-1343-40.png)
-
 Login with `root` as username and `artix` as password.
+
+#### Partitioning
+
+Use the `cfdisk` program to manage and display a disk partition table.
+
+Open `cfdisk /dev/vda`
+
+For me it's vda but for some it might be /dev/sda.
+
+Select gpt as label type.
+
+Select free space and make a new partition of 4.2G. Then a second one with 3.8G.
+
+Write the changes and quit the program.
+
