@@ -194,3 +194,7 @@ You can get the VM's ip with the `ip address` command.
 #### Firewall Setup
 
 We are going to use the UFW (uncomplicated firewall).
+
+Install: `sudo pacman -S ufw ufw-runit`
+
+
