@@ -10,6 +10,8 @@ The second part of roger-skyline is to install a web server on the VM.
 
 My preferred virtualization stack is QEMU+Virt-Manager. The reason people prefer QEMU over VirtualBox is its performance. Virt-Manager is a front-end for QEMU because QEMU by itself is a terminal application.
 
+I chose QEMU because I wanted to learn a new tech stack.
+
 How to install QEMU+Virt-Manager: https://youtu.be/wxxP39cNJOs
 
 ### Install
@@ -124,5 +126,5 @@ And then edit your `/etc/hosts` file like this:
 ```
 127.0.0.1   localhost
 ::1         localhost
-127.0.1.1   hostname.localdomain hostname
+127.0.0.1   hostname.localdomain hostname
 ```
