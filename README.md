@@ -50,9 +50,9 @@ We will create a ext4 file system with the `mkfs` program.
 
 Make sure to make the home partition the bigger one.
 
-`mkfs.ext4 -L HOME /dev/vda1`
+  1. `mkfs.ext4 -L HOME /dev/vda1`
 
-`mkfs.ext4 -L ROOT /dev/vda2`
+  2. `mkfs.ext4 -L ROOT /dev/vda2`
 
 We are labeling them so mounting is easier.
 
@@ -60,27 +60,27 @@ We are labeling them so mounting is easier.
 
 After creating the file systems we need to mount the partition so we can chroot to them.
 
-`mount /dev/disk/by-label/ROOT /mnt`
+  1. `mount /dev/disk/by-label/ROOT /mnt`
 
-`mkdir /mnt/home`
+  2. `mkdir /mnt/home`
 
-`mount /dev/disk/by-label/HOME /mnt/home`
+  3. `mount /dev/disk/by-label/HOME /mnt/home`
 
 #### The Actual Install
 
 Run the following:
 
-`basestrap /mnt base base-devel runit elogind-runit linux vim` <-- Install the base system and kernel
+  1. `basestrap /mnt base base-devel runit elogind-runit linux vim` <-- Install the base system and kernel
 
 Base-devel is optional but needed for sudo, vim and pacman. Everything else is mandatory.
 
-`fstabgen -U /mnt >> /mnt/etc/fstab` <-- For defining how disk partitions are mounted
+  2. `fstabgen -U /mnt >> /mnt/etc/fstab` <-- For defining how disk partitions are mounted
 
 #### Configure The System
 
 Now we have to chroot to get inside the system.
 
-Run `artix-chroot /mnt`
+  1. Run `artix-chroot /mnt`
 
 After this step we are going to be inside our system.
 
@@ -88,43 +88,45 @@ Here you can change to using bash by just typing `bash`.
 
 #### Systemclock
 
-Setup systemclock with `ln -sf /usr/share/zoneinfo/Region/City /etc/localtime`,
+  1. Setup systemclock with `ln -sf /usr/share/zoneinfo/Region/City /etc/localtime`,
 
-and `hwclock --systohc`
+  2. and `hwclock --systohc`
 
 #### Localization
 
 Edit and uncomment your locales you want.
 
-`vim /etc/locale.gen`
+  1. `vim /etc/locale.gen`
 
-Then generare locale using `locale-gen`
+  2. Then generare locale using `locale-gen`
 
 #### Boot Loader
 This is perhaps the most important step. We are going to use grub for our boot loader.
 
-`pacman -S grub os-prober efibootmgr` <-- Install grub
+  1. `pacman -S grub os-prober efibootmgr` <-- Install grub
 
-`grub-install --recheck /dev/vda` <-- Add `--force` if it's complaining about blacklists
+  2. `grub-install --recheck /dev/vda` <-- Add `--force` if it's complaining about blacklists
 
-`grub-mkconfig -o /boot/grub/grub.cfg`
+  3. `grub-mkconfig -o /boot/grub/grub.cfg`
 
 #### Adding Users
 
-First set root password with: `passwd`.
+  1. First set root password with: `passwd`.
 
-Second create a regular user with: 
+  2. Second create a regular user with:
 
-`useradd -m user`
-`passwd user`
+```
+useradd -m user
+passwd user
+```
 
 Then we need to add our new user to the sudoers.
 
 Add it first to the wheel group. It's like a sudo group.
 
-`usermod -aG wheel user`
+  3. `usermod -aG wheel user`
 
-Open the sudoers file in `etc/sudoers` and uncomment this line: `# %wheel ALL=(ALL) ALL`.
+  4. Open the sudoers file in `etc/sudoers` and uncomment this line: `# %wheel ALL=(ALL) ALL`.
 
 Use `:w !sudo tee %` for writing read only files in vim.
 
