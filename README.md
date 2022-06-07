@@ -186,4 +186,7 @@ One of our requirements is to be able to SSH from our current machine to the vir
 
 See detailed list of usable ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers. (Pick from 49152 to 65535).
 
-Then on your host machine do: `ssh-copy-id -i .ssh/<public_key> -p <port> <user>@<ip>`
+You can get the VM's ip with the `ip address` command.
+
+  4. On your host machine do: `ssh-copy-id -i .ssh/<publickey> -p <port> <user>@<ip>` to copy your publickey to the VM so you can SSH without password.
+  5. Now you can SSH to the VM by with `ssh <user>@<ip> -p <port>`.
