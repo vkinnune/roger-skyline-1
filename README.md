@@ -37,4 +37,5 @@ Select free space and make a new partition of 4.2G. Then a second one with 3.8G.
 Write the changes and quit the program.
 
 ![](pic-selected-220607-1359-21.png)
+
 If you use `lsblk` it shoud look something like that above.
