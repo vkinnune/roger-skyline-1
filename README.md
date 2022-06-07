@@ -165,7 +165,7 @@ exit <--exiting the chroot
 umount -R /mnt
 poweroff
 ```
-#### First Login
+### Your First Login
 
 When you first login add NetworkManager to the list of services:
 
