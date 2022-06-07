@@ -170,3 +170,7 @@ poweroff
 When you first login add NetworkManager to the list of services:
 
 `sudo ln -s  /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager`
+
+Now your network should work!
+
+
