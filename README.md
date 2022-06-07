@@ -96,7 +96,7 @@ and `hwclock --systohc`
 
 Edit and uncomment your locales you want.
 
-`nano /etc/locale.gen`
+`vim /etc/locale.gen`
 
 Then generare locale using `locale-gen`
 
@@ -141,7 +141,7 @@ sudo whoami
 
 First we setup a hostname to identify the machine on a network.
 
-`nano /etc/hostname`
+`vim /etc/hostname`
 
 And then edit your `/etc/hosts` file like this:
 ```
