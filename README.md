@@ -111,8 +111,7 @@ First set root password with: `passwd`.
 
 Second create a regular user with: 
 
-` useradd -m user
+`useradd -m user`
+`passwd user`
 
-  passwd user`
-
-d
+#### Network config
