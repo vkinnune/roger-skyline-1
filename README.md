@@ -172,5 +172,11 @@ When you first login add NetworkManager to the list of services:
 `sudo ln -s  /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager`
 
 Now your network should work!
+#### SSH Setup
 
+One of our requirements is to be able from our current machine to the virtual machine using a different port and publickeys.
+
+Install Openssh with: `sudo pacman -Sy openssh-runit openssh`
+
+Add to services: `sudo ln -s  /etc/runit/sv/sshd /run/runit/service/sshd`
 
