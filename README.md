@@ -99,6 +99,6 @@ This is perhaps the most important step. We are going to use grub for our boot l
 
 `pacman -S grub os-prober efibootmgr` <-- Install grub
 
-`grub-install --recheck /dev/sda`
+`grub-install --recheck /dev/sda` <-- Add --force if it's complaining about blacklists
 
 `grub-mkconfig -o /boot/grub/grub.cfg`
