@@ -105,3 +105,11 @@ This is perhaps the most important step. We are going to use grub for our boot l
 
 `grub-mkconfig -o /boot/grub/grub.cfg`
 
+#### Adding Users
+
+First set root password with: `passwd`.
+
+Second create a regular user with: 
+` useradd -m user
+  passwd user`
+d
