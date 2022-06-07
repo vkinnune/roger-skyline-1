@@ -126,6 +126,8 @@ Add it first to the wheel group. It's like a sudo group.
 
 Open the sudoers file in `etc/sudoers` and uncomment this line: `# %wheel ALL=(ALL) ALL`.
 
+Use `:w !sudo tee %` for writing read only files in vim.
+
 To test if it works:
 ```
 su user
@@ -139,7 +141,13 @@ sudo whoami
 
 #### Network config
 
-First we setup a hostname to identify the machine on a network.
+First we need to install NetworkManager to handle our connection.
+
+`pacman -Sy networkmanager networkmanager-runit network-manager-applet`
+
+`sudo ln -s  /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager`
+
+Then we setup a hostname to identify the machine on a network.
 
 `vim /etc/hostname`
 
