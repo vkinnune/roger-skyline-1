@@ -49,5 +49,13 @@ We will create a ext4 file system with the `mkfs.ext4` command in the terminal.
 Make sure to make the home partition the bigger one.
 
 `mkfs.ext4 -L HOME /dev/vda1`
+
 `mkfs.ext4 -L ROOT /dev/vda2`
 
+After creating the file systems we need to mount the partition so we can chroot to them.
+
+`mount /dev/disk/by-label/ROOT /mnt`
+
+`mkdir /mnt/home`
+
+`mount /dev/disk/by-label/HOME /mnt/home`
