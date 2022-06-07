@@ -178,7 +178,10 @@ Now your network should work!
 
 One of our requirements is to be able to SSH from our current machine to the virtual machine using a different port and publickeys.
 
-Install Openssh with: `sudo pacman -Sy openssh-runit openssh`
+  1. Install Openssh with: `sudo pacman -Sy openssh-runit openssh`
 
-Add to services: `sudo ln -s  /etc/runit/sv/sshd /run/runit/service/sshd`
+  2. Add to services: `sudo ln -s  /etc/runit/sv/sshd /run/runit/service/sshd`
 
+  3. Then change the port of SSH. Open /etc/ssh/sshd_config and uncomment and change the Port 22. For example `61216`.
+
+See detailed list of usable ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers.
