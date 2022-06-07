@@ -13,3 +13,8 @@ My preferred virtualization stack is QEMU+Virt-Manager. The reason people prefer
 How to install QEMU+Virt-Manager: https://youtu.be/wxxP39cNJOs
 
 ### Install
+
+Downloade the ISO from here: https://artixlinux.org/download.php
+- Just select the base verison of runit.
+- Then run the ISO on your VM.
+- 
