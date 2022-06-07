@@ -68,4 +68,12 @@ After creating the file systems we need to mount the partition so we can chroot 
 
 Run the following:
 
-`basestrap /mnt base runit elogind-runit linux vim`
+`basestrap /mnt base runit elogind-runit linux vim` <-- Install the base system and kernel
+
+`fstabgen -U /mnt >> /mnt/etc/fstab` <-- For defining how disk partitions are mounted
+
+#### Configure The System
+
+Now we have to chroot to get inside the system.
+
+Run `artix-chroot /mnt`
