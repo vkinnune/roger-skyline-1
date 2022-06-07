@@ -149,3 +149,11 @@ And then edit your `/etc/hosts` file like this:
 ::1         localhost
 127.0.0.1   hostname.localdomain hostname
 ```
+
+Setup is done! Now exit and reboot by:
+
+```
+exit <--exiting the chroot
+umount -R /mnt
+poweroff
+```
