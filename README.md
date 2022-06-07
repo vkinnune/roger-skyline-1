@@ -52,7 +52,7 @@ Make sure to make the home partition the bigger one.
 
 `mkfs.ext4 -L ROOT /dev/vda2`
 
-We are label them so mounting is easier.
+We are labeling them so mounting is easier.
 
 #### Mounting
 
@@ -77,3 +77,9 @@ Run the following:
 Now we have to chroot to get inside the system.
 
 Run `artix-chroot /mnt`
+
+Here you can change to using bash by just typing `bash`.
+
+Setup systemclock with `ln -sf /usr/share/zoneinfo/Region/City /etc/localtime`,
+
+and `hwclock --systohc`
