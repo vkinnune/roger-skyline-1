@@ -30,13 +30,13 @@ Open `cfdisk /dev/vda`
 
 *For me it's vda but for some it might be /dev/sda or if you're not doing this to a VM it might be something beginning with nvme.*
 
-Select gpt as label type.
+  1. Select gpt as label type.
 
 *We need to have two partitions. The root partition and the home partition. If you have a UEFI system (not a VM)  you need the boot partition, and if you are limited in memory, you probably want swap space. The swap space is for when you have limited memory and the operating system can use your hard drive as RAM.*
 
-Select free space and make a new partition of 4.2G. Then a second one with 3.8G. The bigger one is for the home.
+  2. Select free space and make a new partition of 4.2G. Then a second one with 3.8G. The bigger one is for the home.
 
-Write the changes and quit the program.
+  3. Write the changes and quit the program.
 
 ![](pic-selected-220607-1359-21.png)
 
