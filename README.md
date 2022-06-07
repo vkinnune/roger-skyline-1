@@ -70,7 +70,9 @@ After creating the file systems we need to mount the partition so we can chroot 
 
 Run the following:
 
-`basestrap /mnt base runit elogind-runit linux nano` <-- Install the base system and kernel
+`basestrap /mnt base base-devel runit elogind-runit linux vim` <-- Install the base system and kernel
+
+Base-devel is optional but needed for sudo, vim and pacman. Everything else is mandatory.
 
 `fstabgen -U /mnt >> /mnt/etc/fstab` <-- For defining how disk partitions are mounted
 
