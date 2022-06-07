@@ -68,7 +68,7 @@ After creating the file systems we need to mount the partition so we can chroot 
 
 Run the following:
 
-`basestrap /mnt base runit elogind-runit linux vim` <-- Install the base system and kernel
+`basestrap /mnt base runit elogind-runit linux nano` <-- Install the base system and kernel
 
 `fstabgen -U /mnt >> /mnt/etc/fstab` <-- For defining how disk partitions are mounted
 
@@ -80,6 +80,25 @@ Run `artix-chroot /mnt`
 
 Here you can change to using bash by just typing `bash`.
 
+#### Systemclock
+
 Setup systemclock with `ln -sf /usr/share/zoneinfo/Region/City /etc/localtime`,
 
 and `hwclock --systohc`
+
+#### Localization
+
+Edit and uncomment your locales you want.
+
+`nano /etc/locale.gen`
+
+Then generare locale using `locale-gen`
+
+#### Boot Loader
+This is perhaps the most important step. We are going to use grub for our boot loader.
+
+`pacman -S grub os-prober efibootmgr` <-- Install grub
+
+`grub-install --recheck /dev/sda`
+
+`grub-mkconfig -o /boot/grub/grub.cfg`
