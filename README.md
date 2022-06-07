@@ -1,2 +1,2 @@
 # roger-skyline-1
-##How to install Artix Linux
+## How to install Artix Linux
