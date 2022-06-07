@@ -116,6 +116,25 @@ Second create a regular user with:
 `useradd -m user`
 `passwd user`
 
+Then we need to add our new user to the sudoers.
+
+Add it first to the wheel group. It's like a sudo group.
+
+`usermod -aG wheel user`
+
+Open the sudoers file in `etc/sudoers` and uncomment this line: `# %wheel ALL=(ALL) ALL`.
+
+To test if it works:
+```
+su user
+
+whoami
+> user
+
+sudo whoami
+> root
+```
+
 #### Network config
 
 First we setup a hostname to identify the machine on a network.
