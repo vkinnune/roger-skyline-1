@@ -32,10 +32,22 @@ For me it's vda but for some it might be /dev/sda or if you're not doing this to
 
 Select gpt as label type.
 
-Select free space and make a new partition of 4.2G. Then a second one with 3.8G.
+We need to have two partitions. The root partition and the home partition. If you have a UEFI system (not a VM)  you need the boot partition, and if you are limited in memory, you probably want swap space. The swap space is for when you have limited memory and the operating system can use your hard drive as RAM.
+
+Select free space and make a new partition of 4.2G. Then a second one with 3.8G. The bigger one is for the home.
 
 Write the changes and quit the program.
 
 ![](pic-selected-220607-1359-21.png)
 
 If you use `lsblk` it shoud look something like that above.
+
+#### Creating file systems
+
+We will create a ext4 file system with the `mkfs.ext4` command in the terminal.
+
+Make sure to make the home partition the bigger one.
+
+`mkfs.ext4 -L HOME /dev/vda1`
+`mkfs.ext4 -L ROOT /dev/vda2`
+
