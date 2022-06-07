@@ -188,5 +188,5 @@ See detailed list of usable ports: https://en.wikipedia.org/wiki/List_of_TCP_and
 
 You can get the VM's ip with the `ip address` command.
 
-  4. On your host machine do: `ssh-copy-id -i .ssh/<publickey> -p <port> <user>@<ip>` to copy your publickey to the VM so you can SSH without password.
+  4. On your host machine do: `ssh-copy-id -i .ssh/<publickey> -p <port> <user>@<ip>` to copy your publickey to the VM so you can SSH without a password. If you don't have a publickey on your host machine make it with `ssh-keygen`.
   5. Now you can SSH to the VM by with `ssh <user>@<ip> -p <port>` without needing to type the password!
