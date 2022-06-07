@@ -52,6 +52,8 @@ Make sure to make the home partition the bigger one.
 
 `mkfs.ext4 -L ROOT /dev/vda2`
 
+#### Mounting
+
 After creating the file systems we need to mount the partition so we can chroot to them.
 
 `mount /dev/disk/by-label/ROOT /mnt`
@@ -59,3 +61,5 @@ After creating the file systems we need to mount the partition so we can chroot 
 `mkdir /mnt/home`
 
 `mount /dev/disk/by-label/HOME /mnt/home`
+
+
