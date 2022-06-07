@@ -115,3 +115,14 @@ Second create a regular user with:
 `passwd user`
 
 #### Network config
+
+First we setup a hostname to identify the machine on a network.
+
+`nano /etc/hostname`
+
+And then edit your `/etc/hosts` file:
+```
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   desktop.localdomain desktop
+```
