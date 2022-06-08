@@ -202,3 +202,9 @@ Link the service: `sudo ln -s /etc/runit/sv/ufw /run/runit/service/ufw`
 Allow firewall for SSH port: `sudo ufw allow 61216/tcp`
 
 Enable firewall: `sudo ufw enable`
+
+#### DoS Protection Setup
+
+One of the options for DoS attack protection is the [fail2ban](https://en.wikipedia.org/wiki/Fail2ban) framework. It simply bans any IP addresses that make too many authentication attempts in a specified time frame.
+
+Install `sudo pacman -S fail2ban`
