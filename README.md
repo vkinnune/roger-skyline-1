@@ -207,4 +207,6 @@ Enable firewall: `sudo ufw enable`
 
 One of the options for DoS attack protection is the [fail2ban](https://en.wikipedia.org/wiki/Fail2ban) framework. It simply bans any IP addresses that make too many authentication attempts in a specified time frame.
 
-Install `sudo pacman -S fail2ban`
+Install `sudo pacman -S fail2ban fail2ban-runit`
+
+Then link it `sudo ln -s /etc/runit/sv/fail2ban /run/runit/fail2ban`
