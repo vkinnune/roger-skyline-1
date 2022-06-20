@@ -213,3 +213,10 @@ Then link it `sudo ln -s /etc/runit/sv/fail2ban /run/runit/fail2ban`
 
 Copy a local version of conf `cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`
 
+#### Protect Open Ports
+
+We have to protect our VM's open ports and for that we use iptables program.
+
+`sudo pacman -S iptables iptables-runit`
+
+`sudo ln -s /etc/runit/sv/iptables/ /run/runit/service/`
