@@ -211,4 +211,5 @@ Install `sudo pacman -S fail2ban fail2ban-runit`
 
 Then link it `sudo ln -s /etc/runit/sv/fail2ban /run/runit/fail2ban`
 
-Copy a local version of conf ```cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local```
+Copy a local version of conf `cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`
+
