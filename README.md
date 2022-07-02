@@ -28,7 +28,7 @@ Login with `root` as username and `artix` as password.
 
 Use the `cfdisk` program to manage and display a disk partition table.
 
-Open `cfdisk /dev/vda` 
+Open `cfdisk /dev/vda`
 
 *For me it's vda but for some it might be /dev/sda or if you're not doing this to a VM it might be something beginning with nvme.*
 
@@ -218,6 +218,16 @@ Copy a local version of conf `cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.loca
 `sudo pacman -S iptables iptables-runit`
 
 `sudo ln -s /etc/runit/sv/iptables/ /run/runit/service/`
+
+#### Static IP
+
+Open nmtui `sudo nmtui`
+
+Open edit connection and select manual in IPv4 configuration.
+
+Set address to `192.168.1.2/30`
+
+Set gateway to the gateway address you get with `ip r | awk '/'$gateway'/ {print $9}'` command
 
 #### Web server
 Todo: Install apache, test fail2ban with slowloris.
